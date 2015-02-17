@@ -16,7 +16,7 @@
     lifecycle: {
       created: function() {
         var value = this.textContent;
-        this.innerHTML = template;
+        this.appendChild(xtag.createFragment(template));
         if (value) {
           this.value = value;
         }

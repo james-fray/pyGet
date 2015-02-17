@@ -18,10 +18,10 @@ Cu.import("resource://gre/modules/Promise.jsm");
 exports.button = (function () {
   var button = buttons.ActionButton({
     id: self.name,
-    label: "pyGet p2p file sharing",
+    label: "pyGet P2P file sharing",
     icon: {
-      "16": "./icons/16.png",
-      "32": "./icons/32.png"
+      "16": "./icons/client16.png",
+      "32": "./icons/client32.png"
     },
     onClick: function() {
       exports.tab.open(data.url("./ui/index.html"));

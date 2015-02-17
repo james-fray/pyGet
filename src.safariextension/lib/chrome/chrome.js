@@ -12,9 +12,9 @@ app.storage = {
   },
   write: function (id, data) {
     var d = app.Promise.defer();
-    chrome.storage.local.set({
-      id: data
-    }, function () {
+    var obj = {};
+    obj[id] = data;
+    chrome.storage.local.set(obj, function () {
       d.resolve();
     });
     return d.promise;
@@ -23,20 +23,8 @@ app.storage = {
 
 app.content_script = (function () {
   chrome.browserAction.onClicked.addListener(function () {
-    app.tab.list(true).then(function (tabs) {
-      for (var i = 0; i < tabs.length; i++) {
-        var tab = tabs[i];
-        if (tab.url.indexOf(chrome.extension.getURL('data/ui/index.html')) !== -1) {
-          chrome.tabs.update(tab.id, {
-             active: true
-          });
-          return;
-        }
-      }
-      app.tab.open('./data/ui/index.html');
-    });
-
-  })
+    app.tab.open('./data/ui/index.html');
+  });
   return {
     send: function (id, data, global) {
       var options = global ? {} : {active: true, currentWindow: true}

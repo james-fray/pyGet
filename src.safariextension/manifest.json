@@ -1,5 +1,5 @@
 {
-  "name": "pyGet p2p file sharing",
+  "name": "pyGet P2P file sharing",
   "short_name": "ipyget",
   "description": "pyGet lets you share files with remote computers and smart-phones without the need of any plugins.",
   "author": "James Fray",
@@ -19,7 +19,7 @@
   },
   "homepage_url": "http://pyget.com/about.html",
   "icons": {
-    "16": "data/icons/16.png",
+    "16": "data/icons/client16.png",
     "48": "data/icons/48.png",
     "128": "data/icons/128.png"
   }
