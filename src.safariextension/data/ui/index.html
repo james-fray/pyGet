@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="web based p2p file sharing without the need of either internal or external plugins.">
+  <meta name="keywords" content="p2p,webrtc,file sharing,anonymous">
+  <meta name="author" content="pyGet.com">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../icons/16.png">
+  <title>p2p file sharing :: pyGet</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <span id="parent" is="x-vbox" >
+    <span id="top" is="x-hbox">
+      <span is="x-hbox" align="center">
+        <h1>File transfer</h1>
+      </span>
+      <span is="x-hbox" flex="1" pack="end" align="center">
+        <x-button id="refresh" value="Refresh" title="Refresh the page to start over!" width="80px"></x-button>
+        <x-button id="reconnect" value="Reconnect" title="Reconnect to the singnaling server" width="80px" disable="true"></x-button>
+      </span>
+    </span>
+    <span id="body" is="x-vbox" flex="1" align="center" pack="center">
+      <img>
+      <x-dropzone id="drop-zone" width="220px" height="220px"></x-dropzone>
+    </span>
+    <x-log id="log" width="100%" height="200px"></x-log>
+  </span>
+  <x-notification icon="../images/x-notification.png"></x-notification>
+
+  <script src="shadow_index.js"></script>
+</body>
+</html>

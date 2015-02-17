@@ -1,0 +1,17 @@
+{
+  "fullName": "pyGet p2p file sharing",
+  "name": "ipyget",
+  "description": "pyGet lets you share files with remote computers and smart-phones without the need of any plugins.",
+  "id": "jid0-DsyqPoDS9Ujt1xykiiMn8DQk0Ds",
+  "license": "mozilla public license 1.1",
+  "version": "0.1.0",
+  "author": "James Fray",
+  "lib": "lib",
+  "main": "common",
+  "url": "http://add0n.com/index.html",
+  "icon": "data/icons/32.png",
+  "icon64": "data/icons/64.png",
+  "permissions": {
+    "private-browsing": true
+  }
+}
